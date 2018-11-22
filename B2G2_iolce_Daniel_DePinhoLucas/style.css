@@ -1,0 +1,528 @@
+/**************************************************************/
+/*********     iolce#3/CSS/ Daniel Lucas			***************/
+/**************************************************************/
+
+/***begin:affect all code*/
+body{
+	font-family: arial,sans-serif;
+	font-size: 1.125rem;
+	color: #3E3E3E;
+	font-weight: normal;
+	letter-spacing: 0.75px;
+	margin:0; 
+}
+::selection{
+	background-color: #EC195A;
+	color: #fff;
+	padding: 10px;
+}
+main p:after{
+	content: "\00a0";
+}
+main{
+	margin-top: 12vh;
+}
+.container{
+	margin: 0 auto;
+	width: 85%;
+}
+
+.section{
+	padding: 3.5% 2%; 
+	position: relative;
+	margin-bottom: 20%;
+}
+	.section:first-child{
+		margin-top: 10vh;
+		margin-bottom: inherit;
+	}
+	.section:last-of-type{
+		margin-bottom: inherit;
+	}
+	.banner{
+
+		padding: 5% 2% 10%;
+		/*https://www.techworld.com/apps-wearables/google-deepmind-what-is-it-how-it-works-should-you-be-scared-3615354/*/
+		/*	robot img banner bg-img
+		background-image: url(img/robot.png);
+		background-repeat: no-repeat;
+		background-size: cover;*/
+		
+	}
+	.section--luck{
+		background-color: #6EEE7A;
+	}
+	.section--solution{
+		background-color: #63B4E2;
+	}
+/***Triangle*/	
+ /*Exercice visonary*/
+	.section--luck:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			background-color: #6EEE7A;
+			transform: skewY(-14deg);
+			transform-origin: top left;
+			z-index: -10;
+	}
+	.section--luck:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			background-color:#6EEE7A;
+			transform: skewY(14deg);
+			transform-origin: top left;
+			z-index: -10;
+	}
+
+	.section--solution:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			background-color: #63B4E2;
+			transform: skewY(14deg);
+			transform-origin: top right;
+			z-index: -10;
+	}
+
+	.section--solution:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			background-color: #63B4E2;
+			transform: skewY(-14deg);
+			transform-origin: top right;
+			z-index: -10;
+	}
+
+
+
+
+ul{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	margin:0;
+	padding:0 10%;
+	list-style: none;
+}
+
+.robin li{
+	list-style: outside;
+}
+/***Links*/
+.link{
+	color: #EC195A;
+	text-decoration:none;
+}
+	.link:hover{
+		text-decoration:underline;
+	}
+	.link:visited{
+		lighting-color: 20%;
+	}
+.link--light{
+		color: #fff;
+}
+.link--img{
+	color: #787878;
+}
+.link--img:before{
+	content:'\00A9';
+}
+.btn {
+    padding: 5% 10%;
+    font-size: 1.125rem;
+
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+
+    color: #fff;
+    letter-spacing: .1px;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+    background-color:#EC195A;
+}
+
+.btn--border {
+   	padding: inherit;
+    background-color: transparent;
+    color: #EC195A;
+
+}
+.list__btn{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items:flex-start;
+}
+/***Navigation*/
+
+.header{
+	background-color: #63B4E2;
+	position: relative;
+	height: 10vh;
+	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .20);
+}
+
+.sticky {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-top: 0;
+}
+
+
+.logo{
+	color: #fff;
+	text-decoration: none;
+}
+/*Exercice visionary*/
+.burger{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+
+	background-image: url(img/burger.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	padding: 0;
+	border:none;
+	background-color: transparent;
+
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	/*position*/
+	/*<!--In ".section" "position:relative;"-->*/
+	position: absolute;
+	top: 1.5vh;
+	right:8vw;
+
+	z-index: 15;
+}
+
+.menu{
+	position: fixed;
+	top:0;
+	left: 140%;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #63B4E2;
+
+	z-index: 10;
+	transition: transform .3s ease-out;
+	will-change:transform;
+	transform: skewX(14deg);
+
+}
+	.menu ul:first-of-type {
+		
+	    margin-top: 50px;
+	    margin-bottom: 20px;
+		padding-left: 50px;
+
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		
+	}
+	.menu ul:last-of-type{
+
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		
+	}
+	.menu ul:last-child li {
+
+	    float: left;
+	    padding-left: 10px;
+	}
+	.menu li .link--light{
+		display: block;
+		padding: 3% 2%;
+		cursor: pointer;
+		width: 90vw;
+	}
+
+.menu--open{
+	transform: translateX(-140%);
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	position: fixed;
+
+}
+
+.menu li .link--light:hover{
+	transition: all .6s ease-out;
+	transform: perspective(400px) translateX(5%);
+}
+
+
+/***Titles*/
+.title{
+	font-size: 1.9375rem;
+	font-family: Arvo,serif;
+	color: #2D2D2D;
+	font-weight: bold;
+}
+	.title--small{
+		font-size: 1.5rem;
+		color: #3E3E3E;
+		font-weight: inherit;
+	}
+
+	.title--big{
+		font-size: 2.4375rem;
+		color: #2D2D2D;
+		text-shadow: 5px 5px rgba(0,0,0,.05);
+		text-align: center;
+		font-weight: inherit;
+	}
+	
+	.title--light{
+		color: #fff;
+	}
+	
+	/*abreviation of Robin Christopherson*/
+	.small-screen{
+		display: none;
+	}
+
+	@media(max-width: 450px){
+		.small-screen{
+			display: inline-block;
+		}
+		.big-screen{
+			display: none;
+		}
+
+}
+
+/***Boxes*/
+.box{
+
+	background-color: #fff;
+	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .20);
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10;	
+}
+
+	
+/***Images*/
+ /*
+ *not specified on "unsplash.com"
+ * lenses src="https://www.pocket-lint.com/fitness-trackers/news/137530-smart-contact-lenses-what-s-the-story-so-far"
+ * mayson src="ted-talk"
+ * robot src="https://www.dailydot.com/debug/hyundai-robot-suit/"
+ * autonome car https://i.ytimg.com/vi/33Bp1WNqCNw/maxresdefault.jpg
+ */
+ figure{
+ 	margin: 0;
+ }
+ figcaption{
+ 	width: 85%;
+ 	font-size: .75rem;
+ }
+.robin{
+	border-radius: 50%;
+}
+/*src="https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/"*/
+.grow { 
+	transition: all .2s ease-in-out;
+}
+.grow:hover { 
+	transform: scale(1.1); 
+	cursor: pointer;
+}
+/*
+ * Pointer finger svg to idicate "click here".
+ *.grow--robin:after{
+	content: "";
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+
+	background-image: url(img/cursor.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	padding: 0;
+	border:none;
+	background-color: transparent;
+
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+
+	position: absolute;
+	top: 50%;
+	right: 30%;
+
+	opacity: .6;
+}*/
+img{
+	max-width: 100%;
+}
+.img{
+	padding: 0;
+	margin-bottom: 10%;
+	width: 100%;
+	background-repeat: no-repeat;
+	max-width: 100%;
+
+}
+
+/*Bg-ilga for green and blue section*/
+/*.img--water{
+	background-image: url(img/water-glass.jpg);	
+	background-size: cover;
+	background-position: left;
+	height: 60vh;
+	position: absolute;
+	left: 0;
+	top: 31%;
+	opacity: .1;
+	overflow: hidden;
+
+}*/
+
+.space{
+	padding: 5% 0;
+}
+.space--conclusion{
+	font-size: 1.25rem;
+	color: #222;
+}
+
+/*.img--robot{
+	background-image: url(img/robot-suit.jpg);		background-size: cover;
+	background-position: right;
+	height: 60vh;
+	position: absolute;
+	right: 0;
+	top: 30%;
+	opacity: .1;
+	overflow: hidden;
+
+}
+*/
+
+.img--conclusion{
+	background-image: url(img/conclusion.jpg);		background-size: cover;
+	background-position: center;
+	background-size: cover;
+	height: 110%;
+	position: absolute;
+	right: 0;
+	top: -10%;
+	opacity: .05;
+	z-index: -20;
+	margin:0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) { 
+    
+	/*
+	.img--water{
+		background-image: url(img/water-glass@2x.jpg);
+	}*/
+	.img--robot{
+		background-image: url(img/robot-suit@2x.jpg);
+	}
+	.img--conlusion{
+		background-image: url(img/conclusion@2x.jpg);
+	}
+}
+
+/***Video*/
+/*src="https://www.youtube.com/watch?v=9YffrCViTVk"*/
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.video iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 0;
+}
+
+/***Footer*/
+footer{
+	background-color: transparent;
+	height: 200px;
+	line-height: 10vh;
+	width: 100%;
+	margin: 10% 0;
+}
+footer p{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	margin:0;
+}
+.lfooter{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+}
+.lfooter a:hover{
+	color: #fff;
+}
+
+.credit{
+	border-top: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	line-height: 5vh;
+
+}
+.dwm{
+	text-transform: uppercase;
+}
+small{
+	font-size: .75rem;
+}
